@@ -1,4 +1,4 @@
-[
+var arr = [
   {
   "id" : "1",
 	"tags" : "programming",
@@ -119,4 +119,30 @@
       },
       "right_answer" : "между индексами (ключами) таблиц",
       "date" : "2018-01-10T20:19:20Z"  }
-]
+];
+var i = arr.length;
+var j = i-1;
+//Для prompt
+/*while(i--){
+	console.info(arr[i]);
+	prompt("Перейти к следующему вопросу?", "да");
+}  */
+
+// Выводить через каждые 3сек следующий вопрос
+function NextQuestion() {
+	const startTime = Date.now();	
+	const interval = 3000;
+	const delay = interval*10.5;
+	var index=0;
+    const printLeftTime = () => {
+		if(index>j) {
+		setTimeout(() => { clearInterval(timerId); });}
+		else {
+			console.info(`${delay - (Date.now() - startTime)} `,arr[index] );		
+			index++;}
+	}
+   var timerId =  setInterval(printLeftTime, interval);
+};
+NextQuestion();
+
+
