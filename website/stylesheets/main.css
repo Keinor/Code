@@ -1,0 +1,167 @@
+body {
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f2f3f5;
+}
+.navbar a {
+  color: black;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s all;
+  padding-bottom: 4px;
+}
+.navbar .nav:hover {
+  border-bottom: 2px solid #4A0364;
+}
+.navbar ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar .btn {
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: #4A0364;
+  color: white;
+  border: none;
+}
+.navbar-exit {
+  margin-left: auto;
+  display: inline-block;
+}
+
+.container {
+  background: url("../dym.jpg");
+  background-size: cover;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.container .slide_bar {
+  background-color: rgba(242, 243, 245, 0.6);
+  width: 400px;
+  padding: 0;
+  flex-shrink: 3;
+  border-right: 2px solid #4A0364;
+}
+.container ul {
+  list-style: none;
+  padding: 10px 30px;
+  margin: 0;
+}
+.container .main {
+  min-height: calc(100vh - 60px);
+  background-color: #f2f3f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-left: 2%;
+}
+.container .main h1 {
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap;
+}
+.container .main-info span {
+  display: inline-block;
+  margin-top: 20px;
+}
+.container .main-quiz {
+  line-height: 1.5;
+  padding: 20px;
+  margin: 2% 5% 2% 0;
+  border: 3px double #FFDD75;
+}
+.container .main-answers .check {
+  padding-left: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.container .main-answers .check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.container .main-answers .check__box {
+  position: absolute;
+  margin-left: -1.2em;
+  width: 1em;
+  height: 1em;
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff.svg?1550563355034);
+}
+.container .main-answers .check__input:checked + .check__box {
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon.svg?1550563355439);
+}
+.container .main-answers .check__input:focus + .check__box {
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff-focused.svg?1550563355021);
+}
+.container .main-answers .check__input:checked:focus + .check__box {
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon-focused.svg?1550563355063);
+}
+.container .main-answers .check__input:disabled + .check__box {
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff-disabled.svg?1550563354916);
+}
+.container .main-answers .check__input:checked:disabled + .check__box {
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon-disabled.svg?1550563354883);
+}
+.container .main-answers .btn-next {
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: #4A0364;
+  color: white;
+  margin-top: 1.2rem;
+  display: inline-block;
+}
+
+.footer {
+  background-color: rgba(65, 64, 66, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__info {
+  margin: 50px 156px;
+  color: #808081;
+  font-weight: 300;
+  font-size: 16px;
+  margin-right: auto;
+}
+.footer__terms {
+  color: #808081;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 50px 156px;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .slide_bar {
+    display: none;
+  }
+
+  .main {
+    align-items: stretch;
+    flex: 1 1 auto;
+  }
+}
