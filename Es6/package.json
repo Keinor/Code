@@ -1,0 +1,32 @@
+{
+  "name": "project_quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "js:build": "babel src -d dist --presets es2015",
+    "js:watch": "babel src -d dist --presets es2015 -w",
+    "css:build": "node-sass --include-path sass styles/public/sass/main.sass  dist/styles/main_public.css",
+    "css:watch": "node-sass --watch styles/public -o dist/styles/main_public.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keinor/PP.git"
+  },
+  "author": "Keinor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keinor/PP/issues"
+  },
+  "homepage": "https://github.com/Keinor/PP#readme"
+}
