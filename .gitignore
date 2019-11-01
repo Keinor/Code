@@ -1,4 +1,5 @@
 node_modules
 dist
 styles/public/*.css
-styles/public/*.sass
+# исходники как раз должны быть в репозитории, эта строчка будет ошибкой
+# styles/public/*.sass
