@@ -1,4 +1,5 @@
-var db = [
+function db (){
+	return [
 {"id":1,"name":"Innotype","content":"Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.","tags":"gov","createdAt":"2014-12-02T11:10:49Z","imageUrl":"http://dummyimage.com/250x213.jpg/cc0000/ffffff"},
 {"id":2,"name":"Edgetag","content":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.","tags":"mil","createdAt":"2012-05-20T00:15:15Z","imageUrl":"http://dummyimage.com/235x160.jpg/ff4444/ffffff"},
 {"id":3,"name":"Abata","content":"Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.","tags":"mil","createdAt":"2016-06-23T01:05:33Z","imageUrl":"http://dummyimage.com/223x124.jpg/cc0000/ffffff"},
@@ -99,7 +100,57 @@ var db = [
 {"id":98,"name":"Thoughtblab","content":"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.","tags":"name","createdAt":"2012-06-16T15:35:25Z","imageUrl":"http://dummyimage.com/221x165.jpg/dddddd/000000"},
 {"id":99,"name":"Demimbu","content":"Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum.","tags":"info","createdAt":"2019-02-24T04:42:12Z","imageUrl":"http://dummyimage.com/104x223.jpg/dddddd/000000"},
 {"id":100,"name":"Edgeblab","content":"Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.","tags":"com","createdAt":"2011-11-30T06:52:43Z","imageUrl":"http://dummyimage.com/246x234.jpg/cc0000/ffffff"}]
-const search = db.filter(function (items) {
-    return items.id >= 90;
-}).sort((a,b) => b.id-a.id);
-//console.info(search);
+}
+
+function toArticle(item) {
+	return {
+  	...item,
+    createdAt: new Date(item.createdAt)
+  }
+}
+
+function preparedData() {
+	return db().map((item) => toArticle(item));
+}
+
+function getFirstArticleOnPage(currentPage, pageSize) {
+	return (currentPage - 1) * pageSize + 1;
+}
+
+function getLastArticleOnPage(currentPage, pageSize) {
+	return currentPage * pageSize;
+}
+
+function isPositiveInteger(value) {
+	return Number.isInteger(value) && value > 0;
+}
+
+function search(items, currentPage, pageSize, filterFn, sortFn) {
+	if (!Array.isArray(items) || !isPositiveInteger(currentPage) || !isPositiveInteger(pageSize)) {
+  	console.warn('No valid data', items, currentPage, pageSize, filterFn, sortFn);
+  	return [];
+  }
+
+	var result = [...items];
+  
+  if (sortFn) {
+  	result = result.sort(sortFn);
+  }
+  
+  if (filterFn) {
+  	result = result.filter(filterFn);
+  }
+  
+  var firstArticleOnPage = getFirstArticleOnPage(currentPage, pageSize);
+  var lastArticleOnPage = getLastArticleOnPage(currentPage, pageSize);
+   
+  
+  return result.slice(firstArticleOnPage - 1, lastArticleOnPage);
+}
+
+var articles = preparedData();
+
+console.info(search(articles, 4, 6));
+console.info(search(articles, 1, 10));
+console.info(search(articles, 1, 20, (item) => item.tags === 'net'));
+console.log(search(articles, 1, 20, null, (odd, even) => odd.createdAt - even.createdAt));

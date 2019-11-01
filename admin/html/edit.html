@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Edit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+<nav class="navbar ">
+    <a class="navbar-brand" href="#">Admin-panel</a>
+    <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Главная</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link question" href="list.html">Вопросы</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Настройки</a>
+        </li>
+    </ul>
+<div class="exit">
+    <a class="btn btn-danger" href="auth.html">Выйти</a>
+</div>
+</nav>
+
+<div class="container">
+    <h1 class="heading-general">Добавить вопрос</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="question">Вопрос </label>
+            <textarea id="question" class="form-control" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="type">Тип вопроса</label>
+            <select class="form-control" id="type">
+                <option>Один ответ (radio)</option>
+                <option>Много вариантов (checkbox)</option>
+                <option selected>Текстовый ответ (text)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="answer">Текстовый ответ</label>
+            <input type="text" id="answer" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
