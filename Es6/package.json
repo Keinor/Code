@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "node-sass": "^4.13.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.24.1"
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "node-sass": "^4.13.0"
   },
   "scripts": {
-    "js:build": "babel src -d dist --presets es2015",
-    "js:watch": "babel src -d dist --presets es2015 -w",
+    "js:build": "babel src -d lib",
+    "js:watch": "babel src -d lib -w",
     "css:build": "node-sass --include-path sass styles/public/sass/main.sass  dist/styles/main_public.css",
     "css:watch": "node-sass --watch styles/public -o dist/styles/main_public.css"
   },
