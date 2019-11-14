@@ -1,4 +1,4 @@
-function(flag){
+/*function(flag){
 	if(typeof(flag) === "boolean"){
 		return `yes`;
 	}
@@ -8,7 +8,7 @@ function(flag){
 	else {
 		return null;
 	}
-}
+}*/
 
 function counter(total){
 	if(total<=9){
@@ -20,14 +20,14 @@ function counter(total){
 		return tot;
 	}
 }
-/*
-function DateAge(date){
-	var a= ((new Date().getTime() - new Date(date)) / (24 * 3600 * 365.25 * 1000)) | 0;
+
+function calculateAge(value){
+	var a= ((new Date().getTime() - new Date(value)) / (24 * 3600 * 365.25 * 1000));
 	console.info('Возраст');
 	console.info(a);
 	return a;
 }
-
+/*
 function Random(list){
  let a = Math.floor(Math.random() * list.length);
  console.info('Рандомный элемент'); 
