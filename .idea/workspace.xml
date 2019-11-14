@@ -7,6 +7,11 @@
       <change beforePath="$PROJECT_DIR$/admin/html/auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/html/auth.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/html/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/html/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/html/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/html/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tests/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tests/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jasmine_test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/jasmine_test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jasmine_test/tests_homework_2019.10.11/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/jasmine_test/tests_homework_2019.10.11/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jasmine_test/tests_homework_2019.10.11/test.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/jasmine_test/tests_homework_2019.10.11/test.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +78,7 @@
       <workItem from="1572453697172" duration="21536000" />
       <workItem from="1572636707304" duration="65000" />
       <workItem from="1573736027833" duration="23000" />
+      <workItem from="1573743751754" duration="4025000" />
     </task>
     <servers />
   </component>
@@ -84,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
