@@ -8,29 +8,30 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+    <script src="../../Es6/src/lang_website.js"></script>
 </head>
 <body>
  
 <nav class="navbar ">
-    <a class="navbar-brand" href="#">Admin-panel</a>
+    <a class="navbar-brand" href="#" data-name="edit_adminPage"></a>
     <ul class="navbar-nav ">
         <li class="nav-item">
-            <a class="nav-link" href="#">Главная</a>
+            <a class="nav-link" href="#" data-name="edit_mainPage"></a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link question" href="list.html">Вопросы</a>
+            <a class="nav-link question" href="list.html" data-name="edit_questionPage"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Настройки</a>
+            <a class="nav-link" href="#" data-name="edit_settingsPage"></a>
         </li>
     </ul>
 <div class="exit">
-    <a class="btn btn-danger" href="auth.html">Выйти</a>
+    <a class="btn btn-danger" href="auth.html" data-name="edit_value_btn"></a>
 </div>
 </nav>
 
 <div class="container">
-    <h1 class="heading-general">Добавить вопрос</h1>
+    <h1 class="heading-general" data-name="edit_h1_addQuestion"></h1>
 
     <form>
         <div class="form-group">
@@ -52,7 +53,7 @@
             <input type="text" id="answer" class="form-control" />
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
 </div>
 

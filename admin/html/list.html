@@ -1,36 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <title>Panel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="../../Es6/src/lang_website.js"></script>
 </head>
 <body>
-<nav class="navbar">
-    <a class="navbar-brand" href="#">Admin-panel</a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Главная</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Вопросы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Настройки</a>
-            </li>
-        </ul>
-
-    <a class="btn btn-danger" href="auth.html">Выйти</a>
+<nav class="navbar ">
+    <a class="navbar-brand" href="#" data-name="edit_adminPage"></a>
+    <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-name="edit_mainPage"></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link question" href="list.html" data-name="edit_questionPage"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-name="edit_settingsPage"></a>
+        </li>
+    </ul>
+    <div class="exit">
+        <a class="btn btn-danger" href="auth.html" data-name="list_value_btn"></a>
+    </div>
 </nav>
 
 <div class="container">
-    <h1 class="heading-general">Вопросы</h1>
+    <h1 class="heading-general" data-name="edit_questionPage"></h1>
 
     <div class="actions">
         <!--<button type="button" class="btn btn-primary">Создать вопрос</button>-->
-        <a href="edit.html" class="btn btn-primary">Создать вопрос</a>
+        <a href="edit.html" class="btn btn-primary" data-name="list_addQuestion"></a>
     </div>
 
 
