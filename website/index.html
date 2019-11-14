@@ -7,53 +7,36 @@
     <link rel="stylesheet" href="stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+	<script src="../Es6/src/lang_website.js"></script>
 	<title>Quiz system</title>
 </head>
 <body>
 	<nav class="navbar">
 		<ul>
-        	<li><a class="nav navbar-brand" href="#">Quiz System</a></li>
+        	<li><a class="nav navbar-brand" href="#" data-name="index_quiz"></a></li>
         </ul>
        <ul class="navbar-nav">
-            <li class=""><a class="nav nav-link" href="#">Категории</a></li>
+            <li class=""><a class="nav nav-link" href="#" data-name="category"></a></li>
         </ul>        
 	<ul class="navbar-exit">
-		<li><a class="btn" href="">Войти</a></li>
+		<li><a class="btn" href="" data-name="auth_value_btn"></a></li>
 	</ul>
 </nav>
 
 <section class="container">
 	<aside class="slide_bar">
 		<ul>
-			<li><a href="" class="category">Программирование</a>
-				<ul class="category_down">
-					<li><a href="">PHP</a></li>
-				</ul>
-				<ul class="category_down">
-					<li><a href="">CSS</a></li>
-				</ul>
-				<ul class="category_down">
-					<li><a href="">Java</a></li>
-				</ul>
-				<ul class="category_down">
-					<li><a href="">Ruby</a></li>
-				</ul>
-			</li>
+			<li><a href="" class="category" data-name="pageProgramming"></a></li>
+			<li><a href="" class="category" data-name="pageOC"></a></li>
+			<li><a href="" class="category" data-name="pageDB"></a></li>
 		</ul>
-		<ul>
-			<li><a href="" class="category">История</a></li>
-		</ul>
-		<ul>
-			<li><a href="" class="category">Физика</a></li>
-		</ul>
-		
 	</aside>
 
 	<div class="main">
-		<h1>Выберите тест</h1>
+		<h1 data-name="passing_test"></h1>
 		<div class="main-info">
 			<span id="question">
-				Вопрос 1 из 10
+<!--				Вопрос 1 из 10-->
 			</span>
 		</div>
 		<div class="main-quiz">
@@ -64,25 +47,25 @@
 		<label class="check option">
 		<input class="check__input" type="checkbox">
 		<span class="check__box"></span>
-		Первый
+<!--		Первый-->
 		</label>
 	<label class="check option">
 		<input class="check__input" type="checkbox" checked>
 		<span class="check__box"></span>
-		Второй
+<!--		Второй-->
 	</label>
 	<label class="check option">
 		<input class="check__input" type="checkbox" >
 		<span class="check__box"></span>
-		Третий
+<!--		Третий-->
 	</label>
 	<label class="check option">
 		<input class="check__input" type="checkbox">
 		<span class="check__box"></span>
-		Четвёртый
+<!--		Четвёртый-->
 	</label>
 
-	<a href="" class="btn-next">Далее</a>
+	<a href="" class="btn-next" data-name="next_btn"></a>
 		</div>
 	<!-- div main-answers -->
 	</div>
@@ -90,8 +73,8 @@
 	
 </section> 
 <div class="footer">
-		<div class="footer__info">Copyright © 2019 | Quiz System | All Rights Reserved</div>
-		<div class="footer__terms"><a href="#" class="link">Terms of Service</a> | <a href="#" class="link">Privacy Policy</a></div>
+		<div class="footer__info" data-name="copyright"></div>
+		<div class="footer__terms"><a href="#" class="link" data-name="terms"></a> | <a href="#" class="link" data-name="privacy_policy"></a></div>
 	</div>
 </body>
 </html>
