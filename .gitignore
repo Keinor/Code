@@ -1,5 +1,7 @@
 node_modules
 dist
 styles/public/*.css
+homework/*.xml,.iml
+.idea
 # исходники как раз должны быть в репозитории, эта строчка будет ошибкой
 # styles/public/*.sass
