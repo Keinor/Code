@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="stylesheets/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="stylesheets/main.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
-	
+
 	<title>Quiz system</title>
 </head>
 <body>
@@ -40,35 +41,45 @@
 			</span>
 		</div>
 		<div class="main-quiz">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ullam, perspiciatis! Explicabo ex minus, obcaecati recusandae tenetur expedita beatae.
+			<form class="form-question js-form" action="completed.html">
+                    <div class="js-form-control"></div>
+                    <div class="back-next-buttons">
+                        <span class="question_count"></span>
+                        
+	<button type="submit" class="btn-next" data-name="next_btn">Next</button> 
+		</div>
+                    </div>
+                </form>
+
+            <div id="answerBox" class="check_back check_back_hidden">
+            
+            </div>    
 		</div>
 
-	<div class="main-answers">
+	<!-- <div class="main-answers">
 		<label class="check option">
 		<input class="check__input" type="checkbox">
 		<span class="check__box"></span>
-<!--		Первый-->
+		Первый
 		</label>
 	<label class="check option">
 		<input class="check__input" type="checkbox" checked>
 		<span class="check__box"></span>
-<!--		Второй-->
+		Второй
 	</label>
 	<label class="check option">
 		<input class="check__input" type="checkbox" >
 		<span class="check__box"></span>
-<!--		Третий-->
+		Третий
 	</label>
 	<label class="check option">
 		<input class="check__input" type="checkbox">
 		<span class="check__box"></span>
-<!--		Четвёртый-->
+		Четвёртый-->
 	</label>
 
-	<a href="" class="btn-next" data-name="next_btn"></a>
-		</div>
 	<!-- div main-answers -->
-	</div>
+	</div> -->
 	<!-- div main -->
 	
 </section> 
@@ -77,5 +88,7 @@
 		<div class="footer__terms"><a href="#" class="link" data-name="terms"></a> | <a href="#" class="link" data-name="privacy_policy"></a></div>
 	</div>
 </body>
-<script src="../Es6/src/lang_website.js"></script>
+<script src="../src/lang_website.js"></script>
+
+<script src="../src/add-answers.js"></script>
 </html>
